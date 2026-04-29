@@ -1,0 +1,7 @@
+{
+  "name": "CINA",
+  "author": "MDN",
+  "main": "net.ddns.mindustry.cina.Main",
+  "description": "Composite Intermediary for a Not Amazing api",
+  "version": "0.1.0"
+}
