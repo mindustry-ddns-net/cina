@@ -1,9 +1,14 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '2.0.20'
+    id 'org.jetbrains.kotlin.jvm' version '2.3.21'
+    id 'application'
 }
 
 group = 'net.ddns.mindustry'
 version = '0.1.0'
+
+application.applicationDefaultJvmArgs = [
+        "java.system.class.loader='net.ddns.mindustry.cina.command.CommandClassLoader'"
+]
 
 ext {
     mindustryVersion = 'v154'
@@ -20,6 +25,8 @@ dependencies {
     compileOnly "com.github.Anuken.Arc:arc-core:$mindustryVersion"
     compileOnly "com.github.Anuken.Mindustry:core:$mindustryVersion"
     annotationProcessor "com.github.Anuken:jabel:$jabelVersion"
+
+//    implementation "org.jetbrains.kotlin:kotlin-reflect:2.3.21"
 
     testImplementation 'org.jetbrains.kotlin:kotlin-test'
 }
